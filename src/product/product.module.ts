@@ -11,7 +11,7 @@ import { ProductController } from './product.controller';
         name: 'PRODUCT_SERVICE',
         transport: Transport.TCP,
         options: {
-          port: 6002, // This should match your product-service port
+          port: Number(process.env.PRODUCT_SERVICE_PORT) || 6002, // This should match your product-service port
         },
       },
     ]),

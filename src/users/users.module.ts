@@ -10,7 +10,7 @@ import { UsersController } from './users.controller';
         name: 'USER_SERVICE',
         transport: Transport.TCP,
         options: {
-          port: 6001, // This should match your user-service port
+          port: Number(process.env.USER_SERVICE_PORT) || 6001, // This should match your user-service port
         },
       },
     ]),
